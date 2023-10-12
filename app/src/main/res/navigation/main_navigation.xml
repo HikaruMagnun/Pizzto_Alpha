@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="pizzoto.app.ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_producto_description"
+            app:destination="@id/producto_description" />
+    </fragment>
+    <fragment
+        android:id="@+id/menu_fragment"
+        android:name="pizzoto.app.ui.Menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_fragment_to_producto_description"
+            app:destination="@id/producto_description" />
+    </fragment>
+    <fragment
+        android:id="@+id/carrito_fragment"
+        android:name="pizzoto.app.ui.Carrito.CarritoFragment"
+        android:label="fragment_carrito"
+        tools:layout="@layout/fragment_carrito" >
+        <action
+            android:id="@+id/action_carrito_fragment_to_pedidos_fragment"
+            app:destination="@id/pedidos_fragment" />
+        <action
+            android:id="@+id/action_carrito_fragment_to_pedidos_fragment2"
+            app:destination="@id/pedidos_fragment" />
+    </fragment>
+    <!--<fragment
+        android:id="@+id/custon_fragment"
+        android:name="pizzoto.app.ui.Custon.CustonFragment"
+        android:label="fragment_custon"
+        tools:layout="@layout/fragment_custon" />
+        -->
+    <fragment
+        android:id="@+id/pedidos_fragment"
+        android:name="pizzoto.app.ui.Pedidos.PedidosFragment"
+        android:label="fragment_pedidos"
+        tools:layout="@layout/fragment_pedidos" />
+    <fragment
+        android:id="@+id/producto_description"
+        android:name="pizzoto.app.ui.ProductoDescription.ProductoDescriptionFragment"
+        android:label="fragment_producto_description"
+        tools:layout="@layout/fragment_producto_description" >
+        <argument
+            android:name="pizza_name"
+            app:argType="string" />
+        <argument
+            android:name="pizza_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_producto_description_to_menu_fragment"
+            app:destination="@id/menu_fragment" />
+    </fragment>
+</navigation>

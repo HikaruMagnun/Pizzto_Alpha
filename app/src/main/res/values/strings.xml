@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Pizzoto App Alpaha</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_carta">Carta</string>
+    <string name="menu_carrito">Carrito</string>
+    <string name="menu_custon">Custon</string>
+    <string name="menu_pedidos">Pedidos</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="todo">TODO</string>
+    <string name="time">00:00</string>
+</resources>
